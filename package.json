@@ -1,0 +1,25 @@
+{
+  "name": "graphql-api-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "tsc -w & nodemon -q -w dist dist/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@apollo/server": "^4.3.2",
+    "bcrypt": "^5.1.0",
+    "dotenv": "^16.0.3",
+    "fs": "^0.0.1-security",
+    "graphql": "^16.6.0",
+    "jsonwebtoken": "^9.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.18",
+    "typescript": "^4.9.4"
+  }
+}

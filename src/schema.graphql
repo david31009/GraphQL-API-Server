@@ -1,0 +1,17 @@
+type Token {
+  token: String!
+}
+
+type me {
+  account: String
+  name: String
+  birthday: String
+}
+
+type Query {
+  me: me
+}
+
+type Mutation {
+  login(account: String, password: String): Token
+}

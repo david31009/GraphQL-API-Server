@@ -1,0 +1,16 @@
+{
+  "users": [
+    {
+      "account": "david@gmail.com",
+      "password": "$2b$10$cNZOl2vwPgPkOW6bFAH8b./6emCLLJINien1KIT8QqHkt/y9Sx1ki",
+      "name": "David",
+      "birthday": "850202"
+    },
+    {
+      "account": "lisa@gmail.com",
+      "password": "$2b$10$D4TOANUBqdr6NgbhviC5segDLUzVsPozUk/r9nx7V90.I/oWRxIhq",
+      "name": "Lisa",
+      "birthday": "840101"
+    }
+  ]
+}
