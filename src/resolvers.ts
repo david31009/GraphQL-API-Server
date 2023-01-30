@@ -41,7 +41,7 @@ const resolvers = {
 
       if (!passwordIsValid) throw new Error('Wrong Password');
 
-      // login successfully, return jwt Token
+      // login successfully, return JWT Token
       const token: String = await jwt.sign(
         { account: user.account, name: user.name, birthday: user.birthday },
         SECRET,

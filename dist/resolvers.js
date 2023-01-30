@@ -29,7 +29,7 @@ const resolvers = {
             const passwordIsValid = await bcrypt.compare(password, user.password);
             if (!passwordIsValid)
                 throw new Error('Wrong Password');
-            // login successfully, return jwt Token
+            // login successfully, return JWT Token
             const token = await jwt.sign({ account: user.account, name: user.name, birthday: user.birthday }, SECRET, { expiresIn: '1 day' });
             return { token: `${token}` };
         }
