@@ -186,12 +186,12 @@
 
 - 了解如何使用 Node.js 環境架設 apollo-server (參考官方文件)。
   - 安裝 `graphql` 套件: 操作 GraphQL 的規範架構、演算法等。
-  - 安裝 `@apollo/server` 套件: 控制 apollo-server，快速建立 GraphQl API 的工具，可將 http request 轉換為 GraphQL 的請求。
+  - 安裝 `@apollo/server` 套件: 控制 apollo-server，快速建立 GraphQL API 的工具，可將 http request 轉換為 GraphQL 的請求。
 - 使用 TypeScript 來撰寫，且由 tsconfig.json 定義如何將 ts 檔編譯成 js 檔。
-- 監控 ts 檔及 js 檔的變動: 編輯 package.json 中的 scripts，新增 "start": "tsc -w & nodemon -q -w dist dist/index.js"，可以監控 ts 檔的變動，即時編譯，且用 nodemon 監控 js 檔的變動。
-  - tsc -w: 監控 ts 檔，當儲存 ts 檔時，即時編譯。
-  - -q: run in quiet mode.
-  - -w: 用 nodemon 監控 (watch) index.js 檔。
+- 監控 ts 檔及 js 檔的變動: 編輯 package.json 中的 scripts，新增 `"start": "tsc -w & nodemon -q -w dist dist/index.js"`，可以監控 ts 檔的變動，即時編譯，且用 nodemon 監控 js 檔的變動。
+  - `tsc -w`: 監控 ts 檔，當儲存 ts 檔時，即時編譯。
+  - `-q`: run in quiet mode.
+  - `-w`: 用 nodemon 監控 (watch) index.js 檔。
 - 拆出 schema, resolver, 及 json 檔: 利用 fs 套件，讀取 schema.graphql 及 data.json，並將 resolvers.js 由 index.ts 引入。
 - 了解何謂 GraphQL?
   - 是一種為 API 設計的資料查詢 (新增、修改、刪除) 的語言，
@@ -200,8 +200,8 @@
   - Schema: 定義 GraphQL API 的輪廓及規範，Client Side 只要輸入合法的 Query，就可以獲得所定義的資料。
     - Object Type: 是 GraphQL 的基本元件，定義 Front End 可以從 Server 得到什麼類型的資料。
     - 特殊型別: Query, Mutation: 定義了 Entry Point，也就是前端請求的接口。
-      - Query: 對資料進行 "讀" 的接口，應用於讀取資料時。
-      - Mutation: 對資料進行 "寫" 的接口，當需要對資料進行新增、修改等操作。
+      - Query: 對資料進行 `讀` 的接口，應用於讀取資料時。
+      - Mutation: 對資料進行 `寫` 的接口，當需要對資料進行新增、修改等操作。
   - Resolver: 基於 Schema 的設計來完成資料取得和計算的任務。(Resolvers tell Apollo Server how to fetch the data associated with a particular type.)
     - args 參數: 是一個 object，前端輸入的資料可透過 args 取得。(An object that contains all GraphQL arguments provided for this field.)
     - context 參數: 可以記錄所有 resolvers 共用的 object。(An object shared across all resolvers that are executing for a particular operation. Use this to share per-operation state, including `authentication information`...)
