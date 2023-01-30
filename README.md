@@ -204,11 +204,11 @@
 - me API: 啟動 server 時，會從 HTTP 標頭 `Authorization` 取得 JWT token，並記錄於 context 中，當有 me 的 query 時，resolver 會從 context 參數取得使用者資訊並回傳，包含帳號、姓名、生日。
 - JWT token: JWT 是 JSON Web Token 的簡寫，是基於 JSON object 的編碼，並透過這個編碼進行傳遞資訊。
   - JWT 組成: 三個 json object，包含 Header, Payload, Signature (中間用 `.` 隔開)。
-  ```
-  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.
-  eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.
-  XbPfbIHMI6arZ3Y922BhjWgQzWXcXNrz0ogtVhfEd2o
-  ```
+    ```
+    eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.
+    eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.
+    XbPfbIHMI6arZ3Y922BhjWgQzWXcXNrz0ogtVhfEd2o
+    ```
   - Header: 會進行 Base64 進行編碼。Base64 是透過 64 個字符來表示二進制數據的一種方法，編碼的方式是固定的而且是可以逆向解碼的。
     - alg: 紀錄 token 被加密的演算法。
     - typ: token 的 type，基本上就是 JWT。
