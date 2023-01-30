@@ -11,6 +11,11 @@
    1. `login()`: 以使用者帳號及密碼進行登入並取得 JWT token
    2. `me()`: 從 HTTP 標頭 `Authorization` 取得 JWT token 確認使用者身份後，回傳當前的使用者資料
    3. 可以利用 `apollo-server` 提供的 playground 進行 API 測試
+4. 請回信提供專案 github 網址，並在 `README.md` 中提供以下內容
+   1. 程式啟動方式
+   2. 程式架構
+   3. api 的規格與範例
+   4. 整個過程的研究心得
 
 ## Table of Contents
 
